@@ -1,13 +1,38 @@
-import React from 'react';
-import './test.css';
+import React, { useState } from 'react';
 
-function App() {
+import 'assests/styles/index.scss';
+
+import EmailSentAlertModal from 'components/EmailSentAlertModal';
+import UploadProgressModal from 'components/UploadProgressModal';
+import SimpleForm from 'components/SimpleForm';
+
+export default function App() {
+  const [sentModalVisible, setSentModalVisible] = useState(false);
+  const [progressModalVisible, setProgressModalVisible] = useState(false);
+
+  const onFormSave = (data) => {
+    setProgressModalVisible(true);
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        setProgressModalVisible(false);
+        setSentModalVisible(true);
+        resolve();
+      }, 2000);
+    });
+  };
+
   return (
-    <div>
-      <div className="test1">Test1</div>
-      <div className="test2">Test2</div>
+    <div className="app">
+      <div className="app__body">
+        <SimpleForm
+          onSave={onFormSave}
+        />
+        <EmailSentAlertModal
+          visible={sentModalVisible}
+          onClose={() => setSentModalVisible(false)}
+        />
+        <UploadProgressModal visible={progressModalVisible} />
+      </div>
     </div>
   );
 }
-
-export default App;

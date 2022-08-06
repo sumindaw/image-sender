@@ -19,10 +19,15 @@ module.exports = {
         test: /\.(scss|sass)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.svg$/,
+        use: ['react-svg-loader'],
+      },
     ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
   plugins: [
     new HtmlWebPackPlugin({
