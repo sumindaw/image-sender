@@ -1,0 +1,20 @@
+$font-family: sans-serif;
+$font-size: 18px;
+
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-gray: hsl(0, 0%, 50%);
+$color-gray-dark-1: hsl(0, 0%, 35%);
+$color-gray-dark-2: hsl(0, 0%, 25%);
+$color-gray-dark-3: hsl(0, 0%, 15%);
+$color-gray-light-1: hsl(0, 0%, 65%);
+$color-gray-light-2: hsl(0, 0%, 75%);
+$color-gray-light-3: hsl(0, 0%, 85%);
+$color-primary: hsl(211, 80%, 50%);
+$color-error: hsl(4, 90%, 58%);
+$color-font-default: $color-gray-dark-3;
+
+$box-shadow-medium: 0px 3px 3px -2px rgba($color-black, 0.1), 0px 3px 4px 0px rgba($color-black, 0.05), 0px 1px 8px 0px rgba($color-black, 0.12);
+$box-shadow-large: 0px 2px 4px -1px rgba($color-black, 0.2), 0px 4px 5px 0px rgba($color-black, 0.14), 0px 1px 10px 0px rgba($color-black, 0.12);
+
+$display-size-small: '768px';
