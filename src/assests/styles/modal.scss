@@ -1,0 +1,49 @@
+.alert-modal {
+  width: 100%;
+  max-width: 650px;
+  margin-inline: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: $box-shadow-large;
+
+  &__header-bar {
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: 1.75rem;
+    letter-spacing: 0.07rem;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    svg {
+      fill: $color-white;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      user-select: none;
+    }
+  }
+
+  &__body {
+    padding: 30px 20px 50px 20px;
+    letter-spacing: 0.07rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: $color-gray-dark-1;
+    background: $color-white;
+  }
+}
+
+.upload-progress-modal {
+  &__title {
+    color: $color-white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    user-select: none;
+  }
+}

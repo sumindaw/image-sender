@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es2020": true,
+    "browser": true
+  },
+  "plugins": [
+    "import",
+    "jsx-a11y"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "react/prop-types": "off",
+    "react/button-has-type": "off"
+  }
+}

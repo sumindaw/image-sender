@@ -1,0 +1,35 @@
+@import "variables";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color-font-default;
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  color: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  text-transform: none;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@import "button";
+@import "backdrop";
+@import "text-input";
+@import "loader";
+@import "modal";
+@import "simple-form";
+@import "app";

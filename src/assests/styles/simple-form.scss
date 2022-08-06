@@ -1,0 +1,49 @@
+.simple-form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: $box-shadow-medium;
+
+  &__field-container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 70px;
+
+    @media only screen and (min-width: $display-size-small) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__field-container-2 {
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-block: 10px 30px;
+  }
+
+  &__button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  &__image-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 70px;
+    gap: 40px;
+
+    @media only screen and (min-width: $display-size-small) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
