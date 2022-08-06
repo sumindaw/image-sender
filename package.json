@@ -1,21 +1,21 @@
 {
-  "name": "image-uploader",
+  "name": "image-sender",
   "version": "1.0.0",
-  "description": "upload and email images",
+  "description": "Send images to an email",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --hot --config webpack.config.js --host 0.0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sumindaw/image-uploader.git"
+    "url": "git+https://github.com/sumindaw/image-sender.git"
   },
   "author": "sumindawijesuriya@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sumindaw/image-uploader/issues"
+    "url": "git+https://github.com/sumindaw/image-sender.git"
   },
-  "homepage": "https://github.com/sumindaw/image-uploader#readme",
+  "homepage": "https://github.com/sumindaw/image-sender#readme",
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
