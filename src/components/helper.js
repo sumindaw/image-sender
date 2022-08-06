@@ -8,25 +8,36 @@ export const isValidEmail = (email) => {
   return re.test(email);
 };
 
+const EMPTY_FIELD_ERROR_MESSAGES = {
+  firstName: 'First Name is required',
+  lastName: 'Last Name is required',
+  description: 'Description is required',
+  email: 'Email is required',
+};
+
+const INVALID_EMAIL_ERROR_MESSAGE = 'Please enter a valid email';
+
 export const validateSimpleFormField = (field, value) => {
   let error = false;
   let helpText = '';
 
   switch (field) {
-    case 'firstName': {
+    case 'firstName':
+    case 'lastName':
+    case 'description': {
       if (isEmpty(value)) {
         error = true;
-        helpText = 'First Name is required';
+        helpText = EMPTY_FIELD_ERROR_MESSAGES[field];
       }
       break;
     }
     case 'email': {
       if (isEmpty(value)) {
         error = true;
-        helpText = 'Email is required';
+        helpText = EMPTY_FIELD_ERROR_MESSAGES[field];
       } else if (!isValidEmail(value)) {
         error = true;
-        helpText = 'Please enter a valid email';
+        helpText = INVALID_EMAIL_ERROR_MESSAGE;
       }
       break;
     }
