@@ -23,8 +23,7 @@ export default function SimpleForm({ onSave }) {
 
   const [attachedImageFiles, setAttachedImageFiles] = useState([]);
 
-  const disableSave = Object.entries(textInputValidation).some(([, v]) => v.error)
-  || isEmpty(attachedImageFiles);
+  const disableSave = Object.entries(textInputValidation).some(([, v]) => v.error);
 
   const validateTextInput = (field, value) => {
     const { error, helpText } = validateSimpleFormField(field, value);
