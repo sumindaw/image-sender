@@ -4,7 +4,9 @@
   "description": "Send images to an email",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --hot --config webpack.config.js --host 0.0.0.0"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config webpack.dev.js --host 0.0.0.0",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "deploy:prod": "aws --profile personal s3 sync ./.build s3://simple-form-sumindaw --delete"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -33,7 +36,8 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
