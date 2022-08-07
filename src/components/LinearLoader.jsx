@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LinerLoader() {
+export default function LinearLoader() {
   return (
     <div className="liner-loader">
       <div className="liner-loader__progress-bar" />

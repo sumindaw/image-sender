@@ -24,9 +24,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="app__body">
-        <SimpleForm
-          onSave={onFormSave}
-        />
+        <SimpleForm onSave={onFormSave} />
         <EmailSentAlertModal
           visible={sentModalVisible}
           onClose={() => setSentModalVisible(false)}
